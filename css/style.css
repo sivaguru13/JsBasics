@@ -1,0 +1,98 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-size: 15px;
+    color: white;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+.container{
+    border: 2px solid;
+    /* height: 40vh; */
+    width: 40vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    gap: 20px;
+    background: radial-gradient(circle at 0.1% 99.8%, rgb(0, 164, 189) 0%, rgb(0, 189, 165) 90%);
+    object-fit:contain;
+    background-repeat: no-repeat;
+
+    border-radius: 10px;
+    /* background-color: rgba(255, 255, 255,0.9);
+    background: transparent;
+    backdrop-filter: blur(10px);
+     */
+
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+input{
+    outline: none;
+    border: none;
+    background-color: none;
+    color: black;
+}
+#butn1{
+    padding: 5px;
+    width:30%;
+    /* background-color: blue; */
+    background: radial-gradient(circle at 0.1% 99.8%, rgb(0, 164, 189) 0%, rgb(0, 189, 165) 90%); 
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.container-but{
+    display: flex;
+    justify-content: space-between;
+}
+.container-sign{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+i{
+    z-index: 100;
+    margin: 5px;
+    color: rgb(0, 0, 0);
+}
+p{
+    font-size: 10px;
+    text-align: center;
+
+}
+label{
+    font-size: 15px;
+    color: white;
+}
+/* ::placeholder{
+    color: rgb(88, 85, 85);
+    font-size: 10px;
+    
+} */
+h1{
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+.iconwcon{
+    background-color: white;
+    border-radius: 6px;
+    padding: 5.5px;
+}
+#icon{
+    color: white;
+}

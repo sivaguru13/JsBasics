@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doc</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script>
+        function handleClick(){
+            let email=document.getElementById('email').value;
+            let password=document.getElementById('password').value;
+            if((email==='sivaguru' )&& password==='admin'){
+                // alert("Login Succesfully");
+                // document.getElementById('message').innerHTML='Login Success';
+                // document.getElementById('message').style.color='white';
+                // document.getElementById('message').style.backgroundColor='lightgreen';
+                localStorage.setItem('email',email);
+                window.location.href='dashboard.html';
+            }
+            else{
+                alert('Invalid Username and Password');
+                // document.getElementById('message').innerHTML='Login Failed';
+                // document.getElementById('message').style.color='red';
+            }
+        
+        }
+    </script>
+    <script src="https://kit.fontawesome.com/f991721982.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+    <div id="message"></div>
+    <h1>Log in!</h1>
+    <form action="">
+        <!-- <label for="email">Enter your Username</label> -->
+         <div class="iconwcon"><i class="fa-solid fa-user"></i><input type="text" name="email" id="email" placeholder="Username" ></div>
+        
+        <!-- <label for="password">Enter your Password</label> -->
+         <div class="iconwcon"><i class="fa-solid fa-lock"></i><input type="password" name="password" id="password" placeholder="Password" ></div>
+        
+    </form>
+    <div class="container-but">
+        <button onclick="handleClick()" id="butn1">Log in</button>
+        <a href="">Forgot Password </a>
+    </div>
+    <div class="content-sginup">
+    <p>signup with</p>
+    <div class="container-sign">
+        <i class="fa-brands fa-google" id="icon"></i><i class="fa-brands fa-facebook" id="icon"></i><i class="fa-brands fa-github" id="icon"></i>
+
+    </div>
+</div>
+    
+    
+</div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./dashborad.css">
+    <script src="https://kit.fontawesome.com/f991721982.js" crossorigin="anonymous"></script>
+    <script>
+        window.addEventListener('load',function(){
+            let email= localStorage.getItem('email');
+            if(email){
+                document.getElementById('msg').innerHTML="Welcome " + email;
+            }
+        });
+        function logOut(){
+            localStorage.removeItem('email');
+            window.location.href='index.html';
+        }
+
+    </script>
+    
+</head>
+<body>
+    <nav>
+        <img src="https://static.vecteezy.com/system/resources/previews/005/544/770/original/profile-icon-design-free-vector.jpg" alt="">
+        <h1 id="msg">Wecome</h1>
+        <div class="nav-left"> <a href="">Home</a><a href="">About</a><a href="">Services</a></div>
+        <button onclick="logOut()" id="but1"><i class="fa-solid fa-right-from-bracket"></i> logout</button>
+    </nav>
+    
+</body>
+</html>
