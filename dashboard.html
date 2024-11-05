@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./dashborad.css">
+    <link rel="stylesheet" href="./css/dashborad.css">
     <script src="https://kit.fontawesome.com/f991721982.js" crossorigin="anonymous"></script>
     <script>
         window.addEventListener('load',function(){
@@ -17,17 +17,35 @@
             localStorage.removeItem('email');
             window.location.href='index.html';
         }
+        function pageLoad(page){
+            if(page==='about')
+            {
+                document.getElementById('rightside').innerHTML="<object type=text/html data=about.html></object>";
+            }
+            else if(page ==='service')
+            {
+                document.getElementById('rightside').innerHTML="<object type=text/html data=service.html></object>";
+            }
+            else if(page ==='payment')
+            {
+                document.getElementById('rightside').innerHTML="<object type=text/html data=payment.html></object>";
+            }
+        }
 
     </script>
     
 </head>
 <body>
-    <nav>
-        <img src="https://static.vecteezy.com/system/resources/previews/005/544/770/original/profile-icon-design-free-vector.jpg" alt="">
-        <h1 id="msg">Wecome</h1>
-        <div class="nav-left"> <a href="">Home</a><a href="">About</a><a href="">Services</a></div>
-        <button onclick="logOut()" id="but1"><i class="fa-solid fa-right-from-bracket"></i> logout</button>
-    </nav>
+    <div class="whole">
+        <div class="sidebar">
+            <img src="https://static.vecteezy.com/system/resources/previews/005/544/770/original/profile-icon-design-free-vector.jpg" alt="">
+            <h1 id="msg">Wecome</h1>
+            <div class="nav-left"><button onclick="pageLoad('home')" class="butns">Home</button><button onclick="pageLoad('about')" class="butns">About</button><button onclick="pageLoad('service')" class="butns">Service</button><button onclick="pageLoad('payment')" class="butns">Payment</button></div>
+            <button onclick="logOut()" id="but1"><i class="fa-solid fa-right-from-bracket"></i> logout</button>
+        </div>
+        <div id="rightside"></div>
+    </div>
+    
     
 </body>
 </html>
