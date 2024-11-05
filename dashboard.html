@@ -18,7 +18,11 @@
             window.location.href='index.html';
         }
         function pageLoad(page){
-            if(page==='about')
+            if(page==='home')
+            {
+                document.getElementById('rightside').innerHTML="<object type=text/html data=home.html></object>"
+            }
+            else if(page==='about')
             {
                 document.getElementById('rightside').innerHTML="<object type=text/html data=about.html></object>";
             }
@@ -43,7 +47,7 @@
             <div class="nav-left"><button onclick="pageLoad('home')" class="butns">Home</button><button onclick="pageLoad('about')" class="butns">About</button><button onclick="pageLoad('service')" class="butns">Service</button><button onclick="pageLoad('payment')" class="butns">Payment</button></div>
             <button onclick="logOut()" id="but1"><i class="fa-solid fa-right-from-bracket"></i> logout</button>
         </div>
-        <div id="rightside"></div>
+        <div id="rightside"><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A quos nemo sequi reiciendis eum. Iste fuga corrupti adipisci! Neque ab dolorem porro recusandae deserunt, reprehenderit quam! Tempore error vel numquam!</p></div>
     </div>
     
     
