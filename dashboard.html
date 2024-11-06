@@ -17,10 +17,13 @@
             localStorage.removeItem('email');
             window.location.href='index.html';
         }
+        window.addEventListener('load',function(){
+            document.getElementById('rightside').innerHTML="<object style='height:100%; width:100% display:felx justifity-content:center ' type=text/html data=home.html></object>"
+        });
         function pageLoad(page){
             if(page==='home')
             {
-                document.getElementById('rightside').innerHTML="<object type=text/html data=home.html></object>"
+                document.getElementById('rightside').innerHTML="<object style='height:100vh' type=text/html data=home.html></object>"
             }
             else if(page==='about')
             {
@@ -47,7 +50,7 @@
             <div class="nav-left"><button onclick="pageLoad('home')" class="butns">Home</button><button onclick="pageLoad('about')" class="butns">About</button><button onclick="pageLoad('service')" class="butns">Service</button><button onclick="pageLoad('payment')" class="butns">Payment</button></div>
             <button onclick="logOut()" id="but1"><i class="fa-solid fa-right-from-bracket"></i> logout</button>
         </div>
-        <div id="rightside"><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A quos nemo sequi reiciendis eum. Iste fuga corrupti adipisci! Neque ab dolorem porro recusandae deserunt, reprehenderit quam! Tempore error vel numquam!</p></div>
+        <div id="rightside"></div>
     </div>
     
     
