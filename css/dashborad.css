@@ -22,7 +22,7 @@ body{
 }
 #rightside{
     width: 80%;
-    background-color: aqua;
+    background-color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -47,11 +47,14 @@ input{
     padding: 5px;
     width:30%;
     /* background-color: blue; */
-    background: radial-gradient(circle at 0.1% 99.8%, rgb(0, 164, 189) 0%, rgb(0, 189, 165) 90%); 
-    color: rgb(255, 255, 255);
+    
+    color: rgb(0, 0, 0);
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+#butn1:hover{
+    background: radial-gradient(circle at 0.1% 99.8%, rgb(156, 212, 220) 0%, rgb(0, 189, 165) 90%); 
 }
 
 .container-but{
