@@ -20,22 +20,40 @@
         window.addEventListener('load',function(){
             document.getElementById('rightside').innerHTML="<object style='height:100%; width:100% display:felx justifity-content:center ' type=text/html data=home.html></object>"
         });
+        // function pageLoad(page){
+        //     if(page==='home')
+        //     {
+        //         document.getElementById('rightside').innerHTML="<object style='height:100vh' type=text/html data=home.html></object>"
+        //     }
+        //     else if(page==='about')
+        //     {
+        //         document.getElementById('rightside').innerHTML="<object type=text/html data=about.html></object>";
+        //     }
+        //     else if(page ==='service')
+        //     {
+        //         document.getElementById('rightside').innerHTML="<object type=text/html data=service.html></object>";
+        //     }
+        //     else if(page ==='payment')
+        //     {
+        //         document.getElementById('rightside').innerHTML="<object type=text/html data=payment.html></object>";
+        //     }
+        // }
         function pageLoad(page){
-            if(page==='home')
-            {
-                document.getElementById('rightside').innerHTML="<object style='height:100vh' type=text/html data=home.html></object>"
-            }
-            else if(page==='about')
-            {
-                document.getElementById('rightside').innerHTML="<object type=text/html data=about.html></object>";
-            }
-            else if(page ==='service')
-            {
-                document.getElementById('rightside').innerHTML="<object type=text/html data=service.html></object>";
-            }
-            else if(page ==='payment')
-            {
-                document.getElementById('rightside').innerHTML="<object type=text/html data=payment.html></object>";
+            switch(page){
+                case 'home':
+                    document.getElementById('rightside').innerHTML="<object style='height:100vh' type=text/html data=home.html></object>";
+                    break;
+                case 'about':
+                    document.getElementById('rightside').innerHTML="<object style='height:100vh' type=text/html data=about.html></object>";
+                    break;
+                case 'service':
+                    document.getElementById('rightside').innerHTML="<object style='height:100vh' type=text/html data=service.html></object>";
+                    break;
+                case 'payment':
+                    document.getElementById('rightside').innerHTML="<object style='height:100vh' type=text/html data=payment.html></object>";
+                    break;
+                default:
+                    alert('pagenot found');
             }
         }
 
